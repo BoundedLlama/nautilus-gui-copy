@@ -3,32 +3,32 @@ kind: Ingress
 metadata:
   annotations:
     kubernetes.io/ingress.class: haproxy
-  name: INITIALS-desktop # Change this to your initials
+  name: YB-desktop # Change this to your initials
 spec:
   rules:
-  - host: INITIALS.nrp-nautilus.io # Change this to your initials
+  - host: YB.nrp-nautilus.io # Change this to your initials
     http:
       paths:
       - backend:
           service:
-            name: INITIALS-desktop # Change this to your initials
+            name: YB-desktop # Change this to your initials
             port:
               name: http
         path: /
         pathType: ImplementationSpecific
   tls:
   - hosts:
-    - INITIALS.nrp-nautilus.io # Change this to your initials
+    - YB.nrp-nautilus.io # Change this to your initials
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: INITIALS-desktop # Change this to your initials
+  name: YB-desktop # Change this to your initials
   labels:
     app: egl
 spec:
   selector:
-    app: INITIALS # Change this to your initials
+    app: YB # Change this to your initials
   ports:
   - name: http
     protocol: TCP
