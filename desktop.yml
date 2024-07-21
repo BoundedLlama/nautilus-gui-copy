@@ -1,16 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: INITIALS-desktop # Change this to your initials
+  name: YB-desktop # Change this to your initials
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: INITIALS # Change this to your initials
+      app: YB # Change this to your initials
   template:
     metadata:
       labels:
-        app: INITIALS # Change this to your initials
+        app: YB # Change this to your initials
     spec:
       hostname: egl
       containers:
@@ -85,7 +85,7 @@ spec:
           medium: Memory
       - name: egl-cache-vol
         persistentVolumeClaim:
-          claimName: INITIALS-carla-cache # Change this to your initials
+          claimName: YB-carla-cache # Change this to your initials
       - name: egl-root-vol
         persistentVolumeClaim:
-          claimName: INITIALS-carla # Change this to your initials
+          claimName: YB-carla # Change this to your initials
